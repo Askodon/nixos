@@ -21,7 +21,7 @@
   home = {
     username = "askodon";
     homeDirectory = "/home/askodon";
-    stateVersion = "24.11";
+    stateVersion = "25.05";
     enableNixpkgsReleaseCheck = false;
     packages = with pkgs; [
       # Desktop
@@ -46,12 +46,8 @@
       #
 
       #fonts
-      (pkgs.nerdfonts.override {
-        fonts = [
-          "FiraCode"
-          "RobotoMono"
-        ];
-      })
+      nerd-fonts.fira-code
+      nerd-fonts.roboto-mono
       font-awesome
       #
 
