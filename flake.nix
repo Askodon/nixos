@@ -2,15 +2,15 @@
   description = "Nixos-conf flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
-    #nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-darwin = {
-      url = "github:lnl7/nix-darwin/nix-darwin-25.05";
+      url = "github:lnl7/nix-darwin/nix-darwin-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvchad4nix = {
@@ -23,6 +23,18 @@
       submodules = true;
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    zen-browser = {
+    url = "github:0xc000022070/zen-browser-flake";
+    inputs = {
+      # IMPORTANT: To ensure compatibility with the latest Firefox version, use nixpkgs-unstable.
+      nixpkgs.follows = "nixpkgs";
+      home-manager.follows = "home-manager";
+    };
+  };
   };
 
   outputs =
@@ -64,6 +76,24 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users.askodon = import ./home/artemis.nix;
+                backupFileExtension = "hm-backup";
+              };
+            }
+          ];
+        };
+
+        nixosConfigurations = {
+        dionysus = lib.nixosSystem {
+          inherit specialArgs;
+          modules = [
+            ./nixos/dionysus.nix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                inherit extraSpecialArgs;
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.askodon = import ./home/dionysus.nix;
                 backupFileExtension = "hm-backup";
               };
             }
@@ -129,4 +159,5 @@
         };
       };
     };
+};
 }

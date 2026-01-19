@@ -9,6 +9,10 @@ switch-artemis:
   sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-conf/nixos/hardware-configuration.nix
   nh os switch -H artemis .
 
+switch-dionysus:
+  sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-conf/nixos/hardware-configuration.nix
+  nh os switch -H dionysus .
+
 switch-apollo:
   sudo cp /etc/nixos/hardware-configuration.nix ~/nixos-conf/nixos/hardware-configuration.nix
   nh os switch -H apollo .

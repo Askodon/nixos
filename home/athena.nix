@@ -20,7 +20,7 @@
   home = {
     username = "askodon";
     homeDirectory = "/home/askodon";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
     enableNixpkgsReleaseCheck = false;
     packages = with pkgs; [
       # desktop

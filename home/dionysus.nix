@@ -1,17 +1,17 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   imports = [
-    ./programs/hyprland/default.nix
+    inputs.zen-browser.homeModules.twilight
+    inputs.noctalia.homeModules.default
+    #./programs/hyprland/default.nix
     ./programs/shell/default.nix
-    ./programs/foot/default.nix
-    ./programs/waybar/default.nix
-    ./programs/fuzzel/default.nix
-    ./programs/dunst/default.nix
+    #./programs/foot/default.nix
+    #./programs/waybar/default.nix
+    #./programs/fuzzel/default.nix
+    #./programs/dunst/default.nix
     ./programs/nvchad/default.nix
-    ./programs/ags/default.nix
     ./programs/vesktop/default.nix
-    ./programs/firefox/default.nix
-    ./programs/gtk-qt-theme/default.nix
+    #./programs/gtk-qt-theme/default.nix
     ./programs/nix-scripts/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
@@ -23,6 +23,11 @@
       "vivaldi"
       "davinci-resolve"
     ];
+
+  programs.zen-browser.enable = true;
+  programs.noctalia-shell = {
+    enable = true;
+  };
 
   home = {
     username = "askodon";
