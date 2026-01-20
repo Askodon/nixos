@@ -10,6 +10,7 @@
   imports = [
     ./hardware-configuration.nix
     ./modules/boot-settings.nix
+    ./modules/niri.nix
     #./modules/game-settings.nix
     ./modules/locale.nix
     ./modules/network-settings.nix

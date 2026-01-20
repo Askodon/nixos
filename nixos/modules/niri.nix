@@ -22,9 +22,7 @@
   environment.systemPackages = with pkgs; [
     inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     xwayland-satellite
-    tokyonight-gtk-theme
     swayimg
-    rose-pine-cursor
     pkgs.adwaita-icon-theme
     nemo
     fuzzel

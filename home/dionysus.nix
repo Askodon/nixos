@@ -10,7 +10,6 @@
     inputs.noctalia.homeModules.default
     #./programs/hyprland/default.nix
     ./programs/shell/default.nix
-    ./programs/niri/default.nix
     #./programs/foot/default.nix
     #./programs/waybar/default.nix
     #./programs/fuzzel/default.nix
