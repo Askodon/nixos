@@ -20,7 +20,7 @@
     #./modules/virtualisation.nix
     ./modules/overlays.nix
     #./modules/flatpak.nix
-    ./modules/hyprland.nix
+    #./modules/hyprland.nix
     ./modules/system-packages.nix
     ./modules/kmscon.nix
   ];
@@ -40,7 +40,6 @@
 
   # Unstable pkgs
   environment.systemPackages = [
-    pkgs.kitty
   ];
 
   # hostname

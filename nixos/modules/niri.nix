@@ -7,15 +7,18 @@
 }:
 
 {
-  programs.niri.enable = true;
-
-  programs.yazi = {
-    enable = true;
-    plugins = {
-      starship = pkgs.yaziPlugins.starship;
-      wl-clipboard = pkgs.yaziPlugins.wl-clipboard;
-      chmod = pkgs.yaziPlugins.chmod;
-      git = pkgs.yaziPlugins.git;
+  programs ={
+    niri = {
+      enable = true;
+    };
+    yazi = {
+      enable = true;
+      plugins = {
+        starship = pkgs.yaziPlugins.starship;
+        wl-clipboard = pkgs.yaziPlugins.wl-clipboard;
+        chmod = pkgs.yaziPlugins.chmod;
+        git = pkgs.yaziPlugins.git;
+      };
     };
   };
 

@@ -7,7 +7,6 @@
 {
   imports = [
     inputs.zen-browser.homeModules.twilight
-    inputs.noctalia.homeModules.default
     #./programs/hyprland/default.nix
     ./programs/shell/default.nix
     #./programs/foot/default.nix
@@ -17,6 +16,7 @@
     ./programs/nvchad/default.nix
     ./programs/vesktop/default.nix
     #./programs/gtk-qt-theme/default.nix
+    ./programs/niri/default.nix
     ./programs/nix-scripts/default.nix
   ];
   nixpkgs.config.allowUnfreePredicate =
@@ -30,9 +30,6 @@
     ];
 
   programs.zen-browser.enable = true;
-  programs.noctalia-shell = {
-    enable = true;
-  };
 
   home = {
     username = "askodon";

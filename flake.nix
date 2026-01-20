@@ -35,6 +35,10 @@
         home-manager.follows = "home-manager";
       };
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -44,6 +48,7 @@
       home-manager,
       self,
       hyprland,
+      niri,
       nix-darwin,
       ...
     }@inputs:
