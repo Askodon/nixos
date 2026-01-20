@@ -6,7 +6,7 @@
 
   #hyprwm
   programs.hyprland.enable = true;
-  services.xserver.displayManager.gdm = {
+  services.displayManager.gdm = {
     wayland = true;
     enable = true;
   };

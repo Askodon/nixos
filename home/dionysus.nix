@@ -1,10 +1,16 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   imports = [
     inputs.zen-browser.homeModules.twilight
     inputs.noctalia.homeModules.default
     #./programs/hyprland/default.nix
     ./programs/shell/default.nix
+    ./programs/niri/default.nix
     #./programs/foot/default.nix
     #./programs/waybar/default.nix
     #./programs/fuzzel/default.nix
@@ -41,15 +47,15 @@
       mate.eom # Photo
       mate.atril # Pdf
       mate.engrampa # Archive manager
-      transmission_4-gtk # torrent
+      #transmission_4-gtk # torrent
       mpv
       keepassxc
-      vivaldi
+      #vivaldi
       obsidian
       nextcloud-client
-      antares
-      libreoffice
-      davinci-resolve
+      #antares
+      #libreoffice
+      #davinci-resolve
       ffmpeg
       #
 
@@ -64,9 +70,9 @@
       #
 
       # video and audio
-      obs-studio
-      handbrake
-      tenacity
+      #obs-studio
+      #handbrake
+      #tenacity
       #
 
     ];

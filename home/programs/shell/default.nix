@@ -28,7 +28,7 @@
     enableNushellIntegration = true;
   };
 
-  programs.thefuck = {
+  programs.pay-respects = {
     enable = true;
     enableNushellIntegration = true;
   };

@@ -31,7 +31,7 @@
   };
 
   # system version
-  system.stateVersion = "24.11"; # system version
+  system.stateVersion = "25.11"; # system version
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -49,9 +49,6 @@
 
   # hostname
   networking.hostName = "artemis"; # hostname
-
-  # hardware settings
-  hardware.pulseaudio.enable = false;
 
   # security settings
   security = {

@@ -16,7 +16,7 @@
     ./modules/services.nix
     ./modules/system-variables.nix
     ./modules/users.nix
-    ./modules/virtualisation.nix
+    #./modules/virtualisation.nix
     ./modules/overlays.nix
     #./modules/flatpak.nix
     ./modules/hyprland.nix
@@ -31,23 +31,19 @@
   };
 
   # system version
-  system.stateVersion = "24.11"; # system version
+  system.stateVersion = "25.11";
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
   ]; # experimental features
 
-  boot.kernelPackages = pkgs.linuxPackages_xanmod_stable; # test
-
   # Unstable pkgs
   environment.systemPackages = [
+    pkgs.kitty
   ];
 
   # hostname
-  networking.hostName = "dionysus"; # hostname
-
-  # hardware settings
-  hardware.pulseaudio.enable = false;
+  networking.hostName = "dionysus";
 
   # security settings
   security = {

@@ -13,7 +13,7 @@
     #};
     libinput.enable = true;
     avahi.enable = false;
-    openssh.enable = true; # openssh
+    openssh.enable = true;
     flatpak.enable = true;
     resolved.enable = true;
     kmscon = {
