@@ -8,9 +8,6 @@
 
 {
   programs ={
-    niri = {
-      enable = true;
-    };
     yazi = {
       enable = true;
       plugins = {
@@ -23,7 +20,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
     xwayland-satellite
     swayimg
     pkgs.adwaita-icon-theme

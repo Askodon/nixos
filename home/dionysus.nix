@@ -40,6 +40,7 @@
       # desktop
       #betterbird
       vscode
+      ghostty
       mate.eom # Photo
       mate.atril # Pdf
       mate.engrampa # Archive manager

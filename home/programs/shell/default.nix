@@ -7,7 +7,7 @@
   home.packages = with pkgs; [
     deadnix # help deadnix search dead line of nix code
     dconf2nix # dconf files to nix
-    nixfmt-rfc-style # help format nix code
+    nixfmt # help format nix code
     go
     dash
     wget
