@@ -87,7 +87,6 @@ binds {
     Mod+Ctrl+7 { move-column-to-workspace 7; }
     Mod+Ctrl+8 { move-column-to-workspace 8; }
     Mod+Ctrl+9 { move-column-to-workspace 9; }
-    Alt+Tab    { next-window scope="output"; }
     Mod+Ctrl+C { center-visible-columns; }
     Mod+Ctrl+Down { move-window-down; }
     Mod+Ctrl+End { move-column-to-last; }

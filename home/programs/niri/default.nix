@@ -16,7 +16,7 @@
   ];
   
   home.file = {
-    "./config.kdl".source = ./config/niri/config.kdl;
+    ".config/niri/config.kdl".source = ./config.kdl;
   };
   programs = {
     noctalia-shell = {

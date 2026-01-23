@@ -17,7 +17,7 @@
     ./modules/services.nix
     ./modules/system-variables.nix
     ./modules/users.nix
-    #./modules/virtualisation.nix
+    ./modules/virtualisation.nix
     ./modules/overlays.nix
     #./modules/flatpak.nix
     #./modules/hyprland.nix
