@@ -15,7 +15,7 @@
     #./programs/dunst/default.nix
     ./programs/nvchad/default.nix
     ./programs/vesktop/default.nix
-    #./programs/gtk-qt-theme/default.nix
+    ./programs/gtk-qt-theme/default.nix
     ./programs/niri/default.nix
     ./programs/nix-scripts/default.nix
   ];
@@ -47,6 +47,8 @@
       #transmission_4-gtk # torrent
       mpv
       keepassxc
+      pavucontrol
+      easyeffects
       #vivaldi
       obsidian
       nextcloud-client

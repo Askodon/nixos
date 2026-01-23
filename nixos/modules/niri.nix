@@ -22,7 +22,8 @@
   environment.systemPackages = with pkgs; [
     xwayland-satellite
     swayimg
-    pkgs.adwaita-icon-theme
+    tokyonight-gtk-theme
+    adwaita-icon-theme
     nemo
     fuzzel
     gpu-screen-recorder

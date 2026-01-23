@@ -1,13 +1,16 @@
 { pkgs, lib, ... }:
 {
+  hardware.pulseaudio.enable = false;
+  
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
-    config.common.default = "*"; # https://www.reddit.com/r/NixOS/comments/184hbt6/changes_to_xdgportals/
     extraPortals = lib.mkForce [ 
-      pkgs.xdg-desktop-portal-gtk 
       pkgs.xdg-desktop-portal-gnome
-      ];
+      ]; 
+    config = {
+      common.default = [ "gnome" ];
+    };
   };
   services = {
     # services list
@@ -15,6 +18,8 @@
     #"flathub" = "https://dl.flathub.org/repo/flathub.flatpakrepo";
     #};
     libinput.enable = true;
+    tuned.enable = true;
+    upower.enable = true;
     avahi.enable = false;
     openssh.enable = true;
     flatpak.enable = true;
@@ -43,7 +48,13 @@
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
+      jack.enable = true;
       pulse.enable = true;
+      wireplumber = {
+        enable = true;
+        package = pkgs.wireplumber;
+      };
     };
   };
+
 }

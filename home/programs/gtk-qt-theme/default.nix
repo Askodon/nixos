@@ -9,9 +9,12 @@
     libsForQt5.qtstyleplugin-kvantum
     glib
     gsettings-desktop-schemas
+    dconf
   ];
 
-  imports = [ ./dconf-settings.nix ];
+  imports = [ 
+    ./dconf-settings.nix 
+    ];
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Original-Classic";

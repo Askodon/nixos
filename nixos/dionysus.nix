@@ -31,6 +31,8 @@
     inherit (config.nixpkgs) config;
   };
 
+  programs.amnezia-vpn.enable = true;
+
   # system version
   system.stateVersion = "25.11";
   nix.settings.experimental-features = [
